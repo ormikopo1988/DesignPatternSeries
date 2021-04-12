@@ -51,6 +51,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational", "Creational", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "Creational\FactoryMethod\FactoryMethod.csproj", "{9FF16254-949B-4F67-9424-8379B721217E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "Creational\AbstractFactory\AbstractFactory.csproj", "{EDFBDDD7-67ED-412A-926A-902596B27E64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{9FF16254-949B-4F67-9424-8379B721217E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF16254-949B-4F67-9424-8379B721217E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FF16254-949B-4F67-9424-8379B721217E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDFBDDD7-67ED-412A-926A-902596B27E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDFBDDD7-67ED-412A-926A-902596B27E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDFBDDD7-67ED-412A-926A-902596B27E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDFBDDD7-67ED-412A-926A-902596B27E64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,6 +158,7 @@ Global
 		{6C05AF1E-6625-40B8-86D3-824AD6EE0ABD} = {46469832-4D44-4018-9D5C-247E6793C6B0}
 		{A4F4D8E2-39D5-4ED9-AE80-579F37ECCB17} = {46469832-4D44-4018-9D5C-247E6793C6B0}
 		{9FF16254-949B-4F67-9424-8379B721217E} = {C143247C-B6AE-4B5F-8DD3-D6C3E7EB1D7A}
+		{EDFBDDD7-67ED-412A-926A-902596B27E64} = {C143247C-B6AE-4B5F-8DD3-D6C3E7EB1D7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FE34D78-D22B-4E5E-BEDB-7E33EA1B06B8}

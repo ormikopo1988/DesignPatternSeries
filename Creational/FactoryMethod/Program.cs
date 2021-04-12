@@ -26,7 +26,7 @@ namespace FactoryMethod
             Console.ReadLine();
         }
 
-        private static Dialog Initialize(string os)
+        static Dialog Initialize(string os)
         {
             if (os == "Windows")
             {
