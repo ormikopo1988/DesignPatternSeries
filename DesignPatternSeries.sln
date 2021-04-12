@@ -48,6 +48,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Structural\Proxy\Proxy.csproj", "{A4F4D8E2-39D5-4ED9-AE80-579F37ECCB17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational", "Creational", "{C143247C-B6AE-4B5F-8DD3-D6C3E7EB1D7A}"
+	ProjectSection(SolutionItems) = preProject
+		CreationalSummary.md = CreationalSummary.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "Creational\FactoryMethod\FactoryMethod.csproj", "{9FF16254-949B-4F67-9424-8379B721217E}"
 EndProject
