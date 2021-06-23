@@ -51,7 +51,9 @@ namespace Observer
 
             var statusBar = new StatusBar();
             statusBar.AddStock(listOfStocks[0]);
+            statusBar.AddStock(listOfStocks[1]);
             var stockListView = new StockListView();
+            stockListView.AddStock(listOfStocks[0]);
             stockListView.AddStock(listOfStocks[1]);
             stockListView.AddStock(listOfStocks[2]);
 
@@ -59,7 +61,7 @@ namespace Observer
             listOfStocks[1].SetPrice(25);
             listOfStocks[2].SetPrice(35);
 
-            listOfStocks[1].Dettach(stockListView);
+            listOfStocks[1].Dettach(statusBar);
 
             listOfStocks[0].SetPrice(25);
             listOfStocks[1].SetPrice(35);

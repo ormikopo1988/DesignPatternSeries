@@ -16,7 +16,7 @@
 	- Allows defining a template (skeleton) for an operation. Specific steps will then be implemented in subclasses.
 
 # Command: 
-	- Allows decouple a sender from a receiver. The sender will talk to the receive through a command. Commands can be undone and persisted.
+	- Allows decoupling a sender from a receiver. The sender will talk to the receiver through a command. Commands can be undone and persisted.
 
 # Observer: 
 	- Allows an object notify other objects when its state changes.
