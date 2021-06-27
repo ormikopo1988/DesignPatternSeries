@@ -10,7 +10,7 @@ namespace Adapter.Exercise.Start.Gmail
     /// Here’s the problem: In the current file, you can find the class that Google provides to connect to Gmail. 
     /// This class is shipped as a third-party library that we can add to our application. 
     /// We want to re-use this class but the GmailClient class does not extend our IEmailProvider interface. 
-    /// Use the adapter problem to convert the interface of GmailClient.
+    /// Use the adapter pattern to convert the interface of GmailClient.
     /// </summary>
     public class GmailClient
     {
