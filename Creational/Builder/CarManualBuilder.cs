@@ -4,7 +4,7 @@ namespace Builder
 {
     /// <summary>
     /// Unlike other creational patterns, builder lets you construct
-    /// products that don't follow the common interface.
+    /// products that don't follow a common interface.
     /// </summary>
     public class CarManualBuilder : IBuilder
     {

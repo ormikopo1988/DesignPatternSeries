@@ -1,7 +1,7 @@
 ﻿namespace Prototype
 {
     /// <summary>
-    /// Concrete prototype. The cloning method creates a new object
+    /// Concrete prototype. The Clone method creates a new object
     /// and passes it to the constructor. Until the constructor is
     /// finished, it has a reference to a fresh clone. Therefore,
     /// nobody has access to a partly-built clone. This keeps the

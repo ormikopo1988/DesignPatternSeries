@@ -10,6 +10,7 @@
     {
         private readonly IGUIFactory factory;
         private IButton button;
+        private ICheckbox checkbox;
 
         public Application(IGUIFactory factory)
         {
@@ -19,11 +20,13 @@
         public void CreateUI()
         {
             button = factory.CreateButton();
+            checkbox = factory.CreateCheckbox();
         }
 
         public void Paint()
         {
             button.Paint();
+            checkbox.Paint();
         }
     }
 }
