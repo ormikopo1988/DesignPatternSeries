@@ -32,22 +32,26 @@ namespace Builder
 
             Console.WriteLine("Constructed car with:");
             Console.WriteLine($"Number of seats => {car.NumberOfSeats}");
+            Console.WriteLine($"Number of doors => {car.NumberOfDoors}");
             Console.WriteLine($"Engine type => {car.EngineType}");
             Console.WriteLine($"Has trip computer => {car.HasTripComputer}");
             Console.WriteLine($"Has GPS => {car.HasGPS}");
+            Console.WriteLine($"Has voice recognition => {car.HasVoiceRecognition}");
 
             var carManualBuilder = new CarManualBuilder();
             director.SetBuilder(carManualBuilder);
             director.ConstructSportsCar();
-            director.ConstructSUV();
+            //director.ConstructSUV();
 
             var manual = carManualBuilder.Build();
 
             Console.WriteLine("Constructed manual with:");
             Console.WriteLine($"Seats instructions => {manual.SeatsInstructions}");
+            Console.WriteLine($"Doors instructions => {manual.DoorsInstructions}");
             Console.WriteLine($"Engine type instructions => {manual.EngineInstructions}");
-            Console.WriteLine($"Trip computer instructions => {manual.EngineInstructions ?? "No instructions."}");
-            Console.WriteLine($"GPS instructions => {manual.EngineInstructions ?? "No instructions."}");
+            Console.WriteLine($"Trip computer instructions => {manual.TripComputerInstructions ?? "No instructions."}");
+            Console.WriteLine($"GPS instructions => {manual.GPSInstructions ?? "No instructions."}");
+            Console.WriteLine($"Voice recognition instructions => {manual.VoiceRecognitionInstructions ?? "No instructions."}");
 
             Console.ReadLine();
         }

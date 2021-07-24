@@ -8,13 +8,16 @@
     /// </summary>
     public class Car
     {
-        // A car can have a GPS, trip computer and some number of
+        // A car can have a GPS, trip computer, voice recognition,
+        // an engine type, a number of doors and some number of
         // seats. Different models of cars (sports car, SUV,
         // cabriolet) might have different features installed or
         // enabled.
         public string EngineType { get; set; }
         public int NumberOfSeats { get; set; }
+        public int NumberOfDoors { get; set; }
         public bool HasGPS { get; set; }
         public bool HasTripComputer { get; set; }
+        public bool HasVoiceRecognition { get; set; }
     }
 }

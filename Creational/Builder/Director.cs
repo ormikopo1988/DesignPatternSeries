@@ -28,11 +28,13 @@
         /// </summary>
         public void ConstructSportsCar()
         {
-            builder.Reset();
-            builder.SetSeats(2);
-            builder.SetEngine("sports-engine");
-            builder.SetTripComputer(true);
-            builder.SetGPS(true);
+            builder
+                .Reset()
+                .SetSeats(2)
+                .SetDoors(2)
+                .SetEngine("sports-engine")
+                .SetTripComputer(true)
+                .SetGPS(true);
         }
 
         /// <summary>
@@ -41,10 +43,13 @@
         /// </summary>
         public void ConstructSUV()
         {
-            builder.Reset();
-            builder.SetSeats(4);
-            builder.SetEngine("suv-engine");
-            builder.SetGPS(true);
+            builder
+                .Reset()
+                .SetSeats(4)
+                .SetDoors(4)
+                .SetEngine("suv-engine")
+                .SetGPS(true)
+                .SetVoiceRecognition(true);
         }
     }
 }

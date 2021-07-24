@@ -10,9 +10,11 @@
     {
         // Each car should have a user manual that corresponds to
         // the car's configuration and describes all its features.
-        public string SeatsInstructions { get; set; }
         public string EngineInstructions { get; set; }
+        public string SeatsInstructions { get; set; }
+        public string DoorsInstructions { get; set; }
         public string GPSInstructions { get; set; }
         public string TripComputerInstructions { get; set; }
+        public string VoiceRecognitionInstructions { get; set; }
     }
 }

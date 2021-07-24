@@ -22,27 +22,31 @@ namespace Builder
         /// <summary>
         /// The reset method clears the object being built.
         /// </summary>
-        public void Reset()
+        public IBuilder Reset()
         {
             manual = new Manual();
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="engineType"></param>
-        public void SetEngine(string engineType)
+        public IBuilder SetEngine(string engineType)
         {
             Console.WriteLine("Add engine instructions.");
 
             manual.EngineInstructions = $"Add engine {engineType} instructions.";
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="isEnabled"></param>
-        public void SetGPS(bool isEnabled)
+        public IBuilder SetGPS(bool isEnabled)
         {
             Console.WriteLine("Add GPS instructions.");
 
@@ -54,35 +58,75 @@ namespace Builder
             {
                 manual.GPSInstructions = string.Empty;
             }
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="noOfSeats"></param>
-        public void SetSeats(int noOfSeats)
+        public IBuilder SetSeats(int noOfSeats)
         {
             Console.WriteLine("Document car seat features.");
 
             manual.SeatsInstructions = $"Document car seat features. Number of seats: {noOfSeats}";
+
+            return this;
+        }
+
+        /// <summary>
+        /// All production steps work with the same product instance.
+        /// </summary>
+        /// <param name="noOfDoors"></param>
+        /// <returns></returns>
+        public IBuilder SetDoors(int noOfDoors)
+        {
+            Console.WriteLine("Document car door features.");
+
+            manual.DoorsInstructions = $"Document car door features. Number of dpors: {noOfDoors}";
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="isEnabled"></param>
-        public void SetTripComputer(bool isEnabled)
+        public IBuilder SetTripComputer(bool isEnabled)
         {
             Console.WriteLine("Add trip computer instructions.");
 
             if (isEnabled)
             {
-                manual.GPSInstructions = "Add trip computer instructions.";
+                manual.TripComputerInstructions = "Add trip computer instructions.";
             }
             else
             {
-                manual.GPSInstructions = string.Empty;
+                manual.TripComputerInstructions = string.Empty;
             }
+
+            return this;
+        }
+
+        /// <summary>
+        /// All production steps work with the same product instance.
+        /// </summary>
+        /// <param name="isEnabled"></param>
+        public IBuilder SetVoiceRecognition(bool isEnabled)
+        {
+            Console.WriteLine("Add voice recognition instructions.");
+
+            if (isEnabled)
+            {
+                manual.VoiceRecognitionInstructions = "Add voice recognition instructions.";
+            }
+            else
+            {
+                manual.VoiceRecognitionInstructions = string.Empty;
+            }
+
+            return this;
         }
 
         /// <summary>

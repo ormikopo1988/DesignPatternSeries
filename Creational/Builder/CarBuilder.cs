@@ -24,53 +24,90 @@ namespace Builder
         /// <summary>
         /// The reset method clears the object being built.
         /// </summary>
-        public void Reset()
+        public IBuilder Reset()
         {
             car = new Car();
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="engineType"></param>
-        public void SetEngine(string engineType)
+        public IBuilder SetEngine(string engineType)
         {
             Console.WriteLine("Install a given engine.");
 
             car.EngineType = engineType;
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="isEnabled"></param>
-        public void SetGPS(bool isEnabled)
+        public IBuilder SetGPS(bool isEnabled)
         {
             Console.WriteLine("Install a GPS.");
 
             car.HasGPS = isEnabled;
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="noOfSeats"></param>
-        public void SetSeats(int noOfSeats)
+        public IBuilder SetSeats(int noOfSeats)
         {
             Console.WriteLine("Set the number of seats in the car.");
 
             car.NumberOfSeats = noOfSeats;
+
+            return this;
+        }
+
+        /// <summary>
+        /// All production steps work with the same product instance.
+        /// </summary>
+        /// <param name="noOfDoors"></param>
+        /// <returns></returns>
+        public IBuilder SetDoors(int noOfDoors)
+        {
+            Console.WriteLine("Set the number of doors in the car.");
+
+            car.NumberOfDoors = noOfDoors;
+
+            return this;
         }
 
         /// <summary>
         /// All production steps work with the same product instance.
         /// </summary>
         /// <param name="isEnabled"></param>
-        public void SetTripComputer(bool isEnabled)
+        public IBuilder SetTripComputer(bool isEnabled)
         {
             Console.WriteLine("Install a trip computer.");
 
             car.HasTripComputer = isEnabled;
+
+            return this;
+        }
+
+        /// <summary>
+        /// All production steps work with the same product instance.
+        /// </summary>
+        /// <param name="isEnabled"></param>
+        public IBuilder SetVoiceRecognition(bool isEnabled)
+        {
+            Console.WriteLine("Install a voice recognition system.");
+
+            car.HasVoiceRecognition = isEnabled;
+
+            return this;
         }
 
         /// <summary>

@@ -6,10 +6,12 @@
     /// </summary>
     public interface IBuilder
     {
-        void Reset();
-        void SetSeats(int noOfSeats);
-        void SetEngine(string engineType);
-        void SetTripComputer(bool isEnabled);
-        void SetGPS(bool isEnabled);
+        IBuilder Reset();
+        IBuilder SetSeats(int noOfSeats);
+        IBuilder SetDoors(int noOfDoors);
+        IBuilder SetEngine(string engineType);
+        IBuilder SetTripComputer(bool isEnabled);
+        IBuilder SetGPS(bool isEnabled);
+        IBuilder SetVoiceRecognition(bool isEnabled);
     }
 }
