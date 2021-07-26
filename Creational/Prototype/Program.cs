@@ -15,10 +15,7 @@ namespace Prototype
         {
             // Somewhere in the client code.
             var shapes = new List<Shape>();
-            var circle = new Circle();
-            circle.X = 10;
-            circle.Y = 10;
-            circle.Color = "Red";
+            var circle = new Circle(10, 10, "Red");
             circle.Radius = 20;
 
             shapes.Add(circle);
@@ -29,10 +26,7 @@ namespace Prototype
             // of the `circle` object.
             shapes.Add(anotherCircle);
 
-            var rectangle = new Rectangle();
-            rectangle.Width = 10;
-            rectangle.Height = 20;
-            rectangle.Color = "Blue";
+            var rectangle = new Rectangle(20, 20, "Blue");
 
             shapes.Add(rectangle);
 

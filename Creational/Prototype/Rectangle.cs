@@ -15,7 +15,8 @@
         /// <summary>
         /// Regular constructor
         /// </summary>
-        public Rectangle()
+        public Rectangle(int x, int y, string color)
+            : base(x, y, color)
         {
         }
 

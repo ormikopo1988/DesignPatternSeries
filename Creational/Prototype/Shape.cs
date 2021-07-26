@@ -5,16 +5,19 @@
     /// </summary>
     public abstract class Shape
     {
-        public int X { get; set; }
-        public int Y { get; set; }
-        public string Color { get; set; }
+        public int X { get; private set; }
+        public int Y { get; private set; }
+        public string Color { get; private set; }
 
         /// <summary>
         /// Regular constructor.
         /// </summary>
-        public Shape()
+        public Shape(int x, int y, string color)
         {
             // Initialization logic...
+            X = x;
+            Y = y;
+            Color = color;
         }
 
         /// <summary>

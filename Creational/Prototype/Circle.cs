@@ -14,7 +14,8 @@
         /// <summary>
         /// Regular constructor
         /// </summary>
-        public Circle()
+        public Circle(int x, int y, string color)
+            : base(x, y, color)
         {
         }
 
