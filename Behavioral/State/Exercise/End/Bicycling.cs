@@ -4,14 +4,14 @@ namespace State.Exercise.End
 {
     public class Bicycling : ITravelMode
     {
-        public object GetDirection()
+        public int CalculateEstimatedTimeOfArrival()
         {
-            Console.WriteLine("Calculating ETA (bicycling)");
+            Console.WriteLine("Calculating Estimated Time of Arrival (bicycling)");
 
             return 2;
         }
 
-        public object GetEta()
+        public int CalculateDistance()
         {
             Console.WriteLine("Calculating Direction (bicycling)");
 

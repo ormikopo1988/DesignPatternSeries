@@ -12,58 +12,50 @@ namespace State.Exercise.Start
     {
         public TravelMode TravelMode { get; set; }
 
-        public object GetEta()
+        public int CalculateEstimatedTimeOfArrival()
         {
             if (TravelMode == TravelMode.DRIVING)
             {
-                Console.WriteLine("Calculating ETA (driving)");
-
+                Console.WriteLine("Calculating Estimated Time of Arrival (driving)");
                 return 1;
             }
             else if (TravelMode == TravelMode.BICYCLING)
             {
-                Console.WriteLine("Calculating ETA (bicycling)");
-                
+                Console.WriteLine("Calculating Estimated Time of Arrival (bicycling)");
                 return 2;
             }
             else if (TravelMode == TravelMode.TRANSIT)
             {
-                Console.WriteLine("Calculating ETA (transit)");
-                
+                Console.WriteLine("Calculating Estimated Time of Arrival (transit)");
                 return 3;
             }
             else
             {
-                Console.WriteLine("Calculating ETA (walking)");
-                
+                Console.WriteLine("Calculating Estimated Time of Arrival (walking)");
                 return 4;
             }
         }
 
-        public object GetDirection()
+        public int CalculateDistance()
         {
             if (TravelMode == TravelMode.DRIVING)
             {
-                Console.WriteLine("Calculating Direction (driving)");
-
+                Console.WriteLine("Calculating Distance (driving)");
                 return 1;
             }
             else if (TravelMode == TravelMode.BICYCLING)
             {
-                Console.WriteLine("Calculating Direction (bicycling)");
-
+                Console.WriteLine("Calculating Distance (bicycling)");
                 return 2;
             }
             else if (TravelMode == TravelMode.TRANSIT)
             {
-                Console.WriteLine("Calculating Direction (transit)");
-
+                Console.WriteLine("Calculating Distance (transit)");
                 return 3;
             }
             else
             {
-                Console.WriteLine("Calculating Direction (walking)");
-
+                Console.WriteLine("Calculating Distance (walking)");
                 return 4;
             }
         }

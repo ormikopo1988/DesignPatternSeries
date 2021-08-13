@@ -2,7 +2,7 @@
 {
     public interface ITravelMode
     {
-        object GetEta();
-        object GetDirection();
+        int CalculateEstimatedTimeOfArrival();
+        int CalculateDistance();
     }
 }

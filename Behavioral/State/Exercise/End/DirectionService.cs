@@ -2,16 +2,28 @@
 {
     public class DirectionService
     {
-        public ITravelMode TravelMode { get; set; }
+        private ITravelMode currentTravelMode;
 
-        public object GetEta()
+        public DirectionService(ITravelMode initialTravelMode)
         {
-            return TravelMode.GetEta();
+            currentTravelMode = initialTravelMode;
         }
 
-        public object GetDirection()
+        public void ChangeTravelMode(ITravelMode newTravelMode)
         {
-            return TravelMode.GetDirection();
+            if (currentTravelMode.GetType() == newTravelMode.GetType()) return;
+
+            currentTravelMode = newTravelMode;
+        } 
+
+        public int CalculateEstimatedTimeOfArrival()
+        {
+            return currentTravelMode.CalculateEstimatedTimeOfArrival();
+        }
+
+        public int CalculateDistance()
+        {
+            return currentTravelMode.CalculateDistance();
         }
     }
 }

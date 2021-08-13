@@ -30,23 +30,21 @@ namespace State
 
             Console.WriteLine("--- Exercise ---");
 
-            var directionService = new DirectionService();
-            
-            directionService.TravelMode = new Driving();
-            Console.WriteLine(directionService.GetEta());
-            Console.WriteLine(directionService.GetDirection());
+            var directionService = new DirectionService(new Driving());
+            Console.WriteLine(directionService.CalculateEstimatedTimeOfArrival());
+            Console.WriteLine(directionService.CalculateDistance());
 
-            directionService.TravelMode = new Bicycling();
-            Console.WriteLine(directionService.GetEta());
-            Console.WriteLine(directionService.GetDirection());
+            directionService.ChangeTravelMode(new Bicycling());
+            Console.WriteLine(directionService.CalculateEstimatedTimeOfArrival());
+            Console.WriteLine(directionService.CalculateDistance());
 
-            directionService.TravelMode = new Transit();
-            Console.WriteLine(directionService.GetEta());
-            Console.WriteLine(directionService.GetDirection());
+            directionService.ChangeTravelMode(new Transit());
+            Console.WriteLine(directionService.CalculateEstimatedTimeOfArrival());
+            Console.WriteLine(directionService.CalculateDistance());
 
-            directionService.TravelMode = new Walking();
-            Console.WriteLine(directionService.GetEta());
-            Console.WriteLine(directionService.GetDirection());
+            directionService.ChangeTravelMode(new Walking());
+            Console.WriteLine(directionService.CalculateEstimatedTimeOfArrival());
+            Console.WriteLine(directionService.CalculateDistance());
 
             Console.ReadLine();
         }
