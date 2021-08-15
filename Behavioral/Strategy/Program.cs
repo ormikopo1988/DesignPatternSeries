@@ -5,9 +5,6 @@ using System;
 namespace Strategy
 {
     /// <summary>
-    /// Strategy is a behavioral design pattern that lets you define a
-    /// family of algorithms, put each of them into a separate class,
-    /// and make their objects interchangeable.
     /// Strategy and state patterns have a very similar structure.
     /// The difference between them is that in the state pattern,
     /// the "Context" object can have a single state and all the behaviors (the "Context" class methods)
@@ -25,7 +22,8 @@ namespace Strategy
             var imageStorage2 = new ImageStorage(new JpegCompressor(), new HighContrastFilterProcessor());
             imageStorage2.Store("file2");
 
-            // We can also pass the strategy implementation objects in the method and not in the constructor to apply different behaviors to the same image.
+            // We can also pass the strategy implementation objects in the method
+            // and not in the constructor to apply different behaviors to the same image.
             imageStorage2.Store("file2", new PngCompressor(), new HighContrastFilterProcessor());
 
             Console.WriteLine("--- Exercise ---");

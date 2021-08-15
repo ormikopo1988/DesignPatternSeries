@@ -22,7 +22,8 @@ namespace Strategy.Solution
             Console.WriteLine($"Store image with name {fileName}.");
         }
 
-        // We can also pass the strategy implementation objects in the method and not in the constructor to apply different behaviors to the same image.
+        // We can also pass the strategy implementation objects in the method
+        // and not in the constructor to apply different behaviors to the same image.
         public void Store(string fileName, ICompressorStrategy compressor, IFilterStrategy filter)
         {
             compressor.ApplyCompression(fileName);

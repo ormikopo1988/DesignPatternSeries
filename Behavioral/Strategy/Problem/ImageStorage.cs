@@ -2,12 +2,24 @@
 
 namespace Strategy.Problem
 {
+    public enum Compressor
+    {
+        JPEG,
+        PNG
+    }
+
+    public enum Filter
+    {
+        BLACKANDWHITE,
+        HIGHCONTRAST
+    }
+
     public class ImageStorage
     {
-        private readonly string compressor; // JPEG, PNG, ...
-        private readonly string filter; // Black & White, High Contrast, ...
+        private readonly Compressor compressor;
+        private readonly Filter filter;
 
-        public ImageStorage(string compressor, string filter)
+        public ImageStorage(Compressor compressor, Filter filter)
         {
             this.compressor = compressor;
             this.filter = filter;
@@ -15,22 +27,28 @@ namespace Strategy.Problem
 
         public void Store(string fileName)
         {
-            if (compressor == "jpeg")
+            switch (compressor)
             {
-                Console.WriteLine("Compressing using JPEG.");
-            }
-            else if (compressor == "png")
-            {
-                Console.WriteLine("Compressing using PNG.");
+                case Compressor.JPEG:
+                    Console.WriteLine("Compressing using JPEG.");
+                    break;
+                case Compressor.PNG:
+                    Console.WriteLine("Compressing using PNG.");
+                    break;
+                default:
+                    throw new Exception("Unknown compression algorithm.");
             }
 
-            if (filter == "b&w")
+            switch (filter)
             {
-                Console.WriteLine("Applying B&W filter.");
-            }
-            else if (filter == "high-contrast")
-            {
-                Console.WriteLine("Applying high contrast filter.");
+                case Filter.BLACKANDWHITE:
+                    Console.WriteLine("Applying B&W filter.");
+                    break;
+                case Filter.HIGHCONTRAST:
+                    Console.WriteLine("Applying high contrast filter.");
+                    break;
+                default:
+                    throw new Exception("Unknown filter type.");
             }
 
             Console.WriteLine($"Store image with name {fileName}.");
